@@ -46,7 +46,7 @@ into the {body} of the default.hbs template --}}
           {{#if featured}}
             <div class="m-featured-slider glide js-featured-slider">
               <div class="glide__track" data-glide-el="track">
-                <div class="m-featured-slider__list glide__slides">
+                <div class="m-featured-slider__list glide__slides">x`
                   {{#foreach featured}}
                     <div class="m-featured-slider__list__item glide__slide js-featured-slide">
                       <article class="m-featured-article {{#unless feature_image}}no-picture{{/unless}}">
@@ -86,11 +86,17 @@ into the {body} of the default.hbs template --}}
                           <h2 class="m-featured-article__title js-featured-article-title" title="{{title}}">
                             {{title}}
                           </h2>
-                          <div class="m-featured-article__timestamp">
-                            <span>{{date published_at timeago="true"}}</span>
-                            <span>&bull;</span>
-                            <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
-                          </div>
+<!--                            {{#if tags}}-->
+<!--                                <section class="m-tags in-post">-->
+<!--                                    <ul>-->
+<!--                                        {{#foreach tags}}-->
+<!--                                            <li>-->
+<!--                                                <a href="{{url}}" title="{{name}}">{{name}}</a>-->
+<!--                                            </li>-->
+<!--                                        {{/foreach}}-->
+<!--                                    </ul>-->
+<!--                                </section>-->
+<!--                            {{/if}}-->
                         </a>
                       </article>
                     </div>
